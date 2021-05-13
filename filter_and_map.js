@@ -40,3 +40,17 @@ function coinFlip(coin) {
 }
 
 callTenTimes(coinFlip)
+
+// Returning functions could be useful
+
+function canIAfford (price) {
+  return function(myMoney) {
+    if (price > myMoney) {
+      return "I can't afford it";
+    } else {
+      return "I can buy it now"
+    }
+  }
+}
+
+
