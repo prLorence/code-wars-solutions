@@ -20,3 +20,23 @@ const allEvens = (num) => {
   const isEven = num.every((digit) => digit % 2 === 0)
   return isEven
 }
+
+// Higher order functions are neat...
+
+const callTenTimes = function (func) {
+  for (let i = 0; i < 10; i++) {
+    func()
+  }
+};
+
+function coinFlip(coin) {
+
+  if (coin = Math.floor(Math.random() * 10) <= 5) {
+    console.log('Tails');
+  } else {
+    console.log('Heads')
+  }
+
+}
+
+callTenTimes(coinFlip)
