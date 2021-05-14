@@ -84,3 +84,34 @@ function tryAndCatch(val) {
     )
   }
 }
+
+// reduce are rly neat for computations 
+
+let myArr = [123, 124, 124, 01325, 81237];
+
+let sumOfArr = myArr.reduce((acc, curr) => {
+  return acc + curr;
+});
+
+console.log(sumOfArr)
+
+// spread are rly neat for converting arrays into arguments
+
+let myArr = [12, 15, 112, 72351, 1246];
+console.log(...myArr)
+
+// if spread operator is passed in a parameter, it is called REST
+
+function hello(...myParameter){
+  return myParameter
+}
+
+// Destructuring arrays is another way of putting values in a variable from existing array
+
+let myArr = [12, 123, 546, 37342, 2346341, 67457, 1234121, 5347, 1234542];
+
+let [firstEl, secondEl, thirdEl, ...everythingElse] = myArr;
+
+let sumOfElse = everythingElse.reduce((acc, curr) => acc + curr)
+
+console.log(sumOfElse)
