@@ -114,4 +114,58 @@ let [firstEl, secondEl, thirdEl, ...everythingElse] = myArr;
 
 let sumOfElse = everythingElse.reduce((acc, curr) => acc + curr)
 
-console.log(sumOfElse)
+
+
+// Destructuring objs are more common that arrays since you can access the values by using the key names
+
+let myObj = {
+  firstName : 'Tommy',
+  lastName : 'Hilfiger',
+  Age : 18,
+  location : 'San Francisco',
+  born : 2002,
+  state : 'California'
+}
+
+// const {firstName, lastName} = myObj;
+
+// const {born:BirthYear, state:LivingState} = myObj; // you can rename the variable by using colons
+
+// Destructuring params
+
+let fullName = function (myObj) {
+  const {firstName, lastName} = myObj;
+  return `${firstName} ${lastName}`
+}
+
+let user = {
+  firstName: "Tommy",
+  lastName: "Hilfiger",
+  Age: 18,
+  location: "San Francisco",
+  born: 2002,
+  state: "California",
+}
+
+let user2 = {
+  firstName: "Candice",
+  lastName: "Paul",
+  Age: 20,
+  location: "Los Angeles",
+  born: 2000,
+  state: "California",
+}
+
+function lifeSpan(user) {
+  const { born: birthYear, died: deathYear } = user
+  return `${birthYear} ${deathYear} `
+}
+
+// Destructuring params using the obj's properties
+
+function fullName({ firstName, lastName }) {
+  return `${firstName} ${lastName}`
+} // By using this, you can dynamically extract the key values using variable names of obj names.
+
+
+// NOTE: when destructuring obj's always use curly brackets.
